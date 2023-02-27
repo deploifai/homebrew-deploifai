@@ -3,9 +3,9 @@ class Deploifai < Formula
 
   desc "Deploifai CLI"
   homepage "https://deploif.ai"
-  url "https://github.com/deploifai/cli.git", tag: "v0.3.3"
+  url "https://github.com/deploifai/cli.git", tag: "v0.4.0"
   head "https://github.com/deploifai/cli.git"
-  version "0.3.3"
+  version "0.4.0"
 
   depends_on "python@3.9"
   depends_on "rust" => :build # for cryptography
@@ -66,8 +66,8 @@ class Deploifai < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/e3/3f/41186b1f2fd86a542d399175f6b8e43f82cd4dfa51235a0b030a042b811a/cryptography-38.0.4.tar.gz"
-    sha256 "175c1a818b87c9ac80bb7377f5520b7f31b3ef2a0004e2420319beadedb67290"
+    url "https://files.pythonhosted.org/packages/f9/4b/1cf8e281f7ae4046a59e5e39dd7471d46db9f61bb564fddbff9084c4334f/cryptography-36.0.1.tar.gz"
+    sha256 "53e5c1dc3d7a953de055d77bef2ff607ceef7a2aac0353b5d630ab67f7423638"
   end
 
   resource "google-api-core" do
