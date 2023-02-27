@@ -7,7 +7,7 @@ class Deploifai < Formula
   head "https://github.com/deploifai/cli.git"
   version "0.4.0"
 
-  depends_on "python@3.7"
+  depends_on "python@3.9"
   depends_on "rust" => :build # for cryptography
 
   resource "azure-core" do
