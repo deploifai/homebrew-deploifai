@@ -5,21 +5,21 @@
 class Deploifai < Formula
   desc "CLI tool for Deploifai"
   homepage "https://deploif.ai"
-  version "0.5.0-alpha-6"
+  version "0.5.0-alpha-9"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Darwin_x86_64.tar.gz"
-      sha256 "d49c3d0e2ca16f6340caf6ad209063a0ba3779ab59573e7ef1dd3c1e9436434e"
+    if Hardware::CPU.arm?
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-9/deploifai_Darwin_arm64.tar.gz"
+      sha256 "39227862fd492948d65573097b6b32280ccd66dfa6de14c8e3518bbac7d9d02b"
 
       def install
         bin.install "deploifai"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Darwin_arm64.tar.gz"
-      sha256 "647c51f69ab958789528e89e2bcc08ffc713b1a49bafcecf64513e138fdcd2d8"
+    if Hardware::CPU.intel?
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-9/deploifai_Darwin_x86_64.tar.gz"
+      sha256 "aedaa5a89ba8810480c3028999b338348b7a8deffa5d414e545e1986aef41f2e"
 
       def install
         bin.install "deploifai"
@@ -29,16 +29,16 @@ class Deploifai < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Linux_x86_64.tar.gz"
-      sha256 "30cf31fa03633a6a6f80caf4dabb05e9e29c233953f7fa28ade0c68133bf472e"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-9/deploifai_Linux_x86_64.tar.gz"
+      sha256 "1899d4f6d23713148da212cab3ebe946bb34edd69ec82b1852c54d5e47d9d305"
 
       def install
         bin.install "deploifai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Linux_arm64.tar.gz"
-      sha256 "7f9fa7e59b1f9b3daf0d3ecff069c7cd615e0debe09213643102ce3e6bdbbfff"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-9/deploifai_Linux_arm64.tar.gz"
+      sha256 "37f13715d90e843205cee5ffc6fe13f2a3a53c448f4333ead766e59dd1906056"
 
       def install
         bin.install "deploifai"
