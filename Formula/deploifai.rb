@@ -5,21 +5,21 @@
 class Deploifai < Formula
   desc "CLI tool for Deploifai"
   homepage "https://deploif.ai"
-  version "0.5.0-alpha-6"
+  version "0.5.0-alpha-8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Darwin_x86_64.tar.gz"
-      sha256 "d49c3d0e2ca16f6340caf6ad209063a0ba3779ab59573e7ef1dd3c1e9436434e"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-8/deploifai_Darwin_x86_64.tar.gz"
+      sha256 "9c843528e8fcad13814045ae847c97b97ca104518722f7eb6120964fc5e9dfe1"
 
       def install
         bin.install "deploifai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Darwin_arm64.tar.gz"
-      sha256 "647c51f69ab958789528e89e2bcc08ffc713b1a49bafcecf64513e138fdcd2d8"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-8/deploifai_Darwin_arm64.tar.gz"
+      sha256 "6387daafc9e1a2e9403eec9bf4c1ef2c0729a14429bf87b7caa0ffd1540ef4ec"
 
       def install
         bin.install "deploifai"
@@ -29,16 +29,16 @@ class Deploifai < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Linux_x86_64.tar.gz"
-      sha256 "30cf31fa03633a6a6f80caf4dabb05e9e29c233953f7fa28ade0c68133bf472e"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-8/deploifai_Linux_x86_64.tar.gz"
+      sha256 "6fa27ec49c02295c7f5ee9b6c26d89d049c97fb2896e620ccefb75e89ee1c2c1"
 
       def install
         bin.install "deploifai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-6/deploifai_Linux_arm64.tar.gz"
-      sha256 "7f9fa7e59b1f9b3daf0d3ecff069c7cd615e0debe09213643102ce3e6bdbbfff"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.0-alpha-8/deploifai_Linux_arm64.tar.gz"
+      sha256 "e7e914a704d74cd1ee2065443708cfeac620541510f68ccf195e01ae156dec04"
 
       def install
         bin.install "deploifai"
