@@ -5,21 +5,21 @@
 class Deploifai < Formula
   desc "CLI tool for Deploifai"
   homepage "https://deploif.ai"
-  version "0.5.2"
+  version "0.5.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.2/deploifai_Darwin_x86_64.tar.gz"
-      sha256 "3a8d5cb74c808da8d134f06d5a007b3d323fa9d37fc570ee90f7008979cac51a"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.3/deploifai_Darwin_x86_64.tar.gz"
+      sha256 "742e7fddc6dcb600d9a57ffff364b2bfeec3498f3409a9d2c349d75f04422b25"
 
       def install
         bin.install "deploifai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.2/deploifai_Darwin_arm64.tar.gz"
-      sha256 "9c19389178026c825b6a61a8e23f10650c6335d06b218bc9e36181644877b814"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.3/deploifai_Darwin_arm64.tar.gz"
+      sha256 "c156868a06db7ea312aa946b0736ed0651882ed477080125265f4b48d86a304b"
 
       def install
         bin.install "deploifai"
@@ -29,16 +29,16 @@ class Deploifai < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.2/deploifai_Linux_arm64.tar.gz"
-      sha256 "9798db23fe5a4eade4f33c9aa37129b18855ea418be9aafb5e54bd06426a61da"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.3/deploifai_Linux_arm64.tar.gz"
+      sha256 "9fd0aa4cd577438d4e556995af302c44b841a6abb870b4b15d7423033f9fcf82"
 
       def install
         bin.install "deploifai"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/deploifai/cli-go/releases/download/v0.5.2/deploifai_Linux_x86_64.tar.gz"
-      sha256 "b070c45987d46c28daac8fd3e3a6cf0214b74b3153baa1b14ff6395a00615e2f"
+      url "https://github.com/deploifai/cli-go/releases/download/v0.5.3/deploifai_Linux_x86_64.tar.gz"
+      sha256 "27dec41e93740f6aa3edc3f9204dd016754cdb5c09f9a84dc8cbb4da2d67acf4"
 
       def install
         bin.install "deploifai"
